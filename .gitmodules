@@ -1,0 +1,3 @@
+[submodule "ResearchFramework"]
+	path = ResearchFramework
+	url = https://github.com/iasolb/ResearchFramework.git
