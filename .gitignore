@@ -209,7 +209,6 @@ __marimo__/
 
 
 
-# ==== Extras to Hide =======
+# ==== Dev to Hide =======
 
-
-data_exploration.ipynb
+development/

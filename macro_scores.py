@@ -134,11 +134,12 @@ def _attach_derived(df: pd.DataFrame) -> pd.DataFrame:
 
     # ── Fiscal derived ────────────────────────────────────────────────
     # Debt / GDP (approximate — quarterly GDP annualized)
-    df["Debt_to_GDP"] = df["Federal_Debt_Total"] / (df["Nominal_GDP"] * 4) * 100
+    # GFDEBTN is in millions, GDP is in billions (SAAR — already annualized)
+    df["Debt_to_GDP"] = (df["Federal_Debt_Total"] / 1000) / df["Nominal_GDP"] * 100
 
-    # Deficit as % of GDP (monthly deficit annualized / nominal GDP)
+    # MTSDS133FMS is in millions, GDP is in billions (SAAR)
     df["Deficit_GDP_Pct"] = (
-        df["Monthly_Treasury_Statement_Deficit"] * 12 / (df["Nominal_GDP"] * 4) * 100
+        (df["Monthly_Treasury_Statement_Deficit"] * 12 / 1000) / df["Nominal_GDP"] * 100
     )
 
     # ── SEP-based derived ─────────────────────────────────────────────
