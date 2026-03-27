@@ -8,3 +8,6 @@ scikit-learn
 matplotlib
 seaborn
 statsmodels
+plotly
+nbformat>=4.2.0
+kaleido
