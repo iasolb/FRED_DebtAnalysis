@@ -1,0 +1,9 @@
+fredapi
+pandas
+numpy
+python-dotenv
+geopandas
+scipy
+scikit-learn
+matplotlib
+seaborn
