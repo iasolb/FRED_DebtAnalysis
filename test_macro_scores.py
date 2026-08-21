@@ -6,7 +6,7 @@ from macro_scores import _attach_continuous
 
 
 class TaylorRuleRStarTests(unittest.TestCase):
-    def test_uses_hlw_r_star_before_sep_and_sep_when_available(self):
+    def test_uses_hlw_r_star_as_fallback_and_prefers_sep_when_available(self):
         df = pd.DataFrame(
             {
                 "SEP_r_star": [float("nan"), 0.5],
