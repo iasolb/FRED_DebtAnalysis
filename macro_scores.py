@@ -63,10 +63,6 @@ _PI_STAR = 2.0  # percent, Fed's stated target
 # CBO's recent estimates center around 4.0–4.4%)
 _U_STAR = 4.0
 
-# Neutral real rate (r*) — used when SEP longer-run is unavailable.
-# SEP longer-run FFR minus 2% target ≈ 0.5–1.0% in recent years.
-_R_STAR_DEFAULT = 0.5
-
 # Sahm rule threshold
 _SAHM_THRESHOLD = 0.50
 
@@ -267,10 +263,10 @@ def _attach_continuous(df: pd.DataFrame) -> pd.DataFrame:
     # ── Taylor Rule Gap ───────────────────────────────────────────────
     # Classic Taylor (1993): r_t = r* + π_t + α(π_t - π*) + β(u* - u_t)
     #
-    # Uses SEP-implied r* when available, else default.
+    # Uses SEP-implied r* when available, else the HLW estimate.
     # Positive gap = policy is too loose (Taylor says raise).
     # Negative gap = policy is too tight (Taylor says cut).
-    r_star = df["SEP_r_star"].fillna(_R_STAR_DEFAULT)
+    r_star = df["SEP_r_star"].combine_first(df["HLW_r_star"])
     pi = df["Core_PCE_YoY"]
     u_gap = _U_STAR - df["Unemployment_Rate"]  # positive when UE below NAIRU
 

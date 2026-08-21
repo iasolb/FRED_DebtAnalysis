@@ -56,6 +56,7 @@ def load_fred_master() -> pd.DataFrame:
         "BAMLH0A0HYM2": ("HY_OAS_Spread", "D"),
         "BAMLC0A0CM": ("IG_OAS_Spread", "D"),
         "MORTGAGE30US": ("Mortgage_Rate_30Y", "W"),
+        "NIRRU": ("HLW_r_star", "Q"),
         # ── Money Supply & Credit ─────────────────────────────────────────────
         "M2SL": ("M2_Money_Stock", "M"),
         "TOTRESNS": ("Total_Reserves", "M"),
