@@ -11,11 +11,11 @@ local loader (`loader.py`) and scoring layer (`macro_scores.py`), with the
 
 ## Reproduce
 
-- `DebtRegime_M2Passthrough.ipynb` — main analysis
-- `DebtRegime_RobustnessChecks.ipynb` — robustness checks
-- `charts/` and `output_graphs/` — figures used in the piece
-- `data/fred_master.csv` — the FRED pull; `data/health_service_gap.csv`
-- `test_macro_scores.py` — tests for the scoring layer
+- `DebtRegime_M2Passthrough.ipynb`: main analysis
+- `DebtRegime_RobustnessChecks.ipynb`: robustness checks
+- `charts/` and `output_graphs/`: figures used in the piece
+- `data/fred_master.csv`: the FRED pull; `data/health_service_gap.csv`
+- `test_macro_scores.py`: tests for the scoring layer
 
 Clone with `--recursive` to pull the `ResearchFramework` submodule.
 
