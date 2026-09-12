@@ -2,8 +2,8 @@
 
 The data and notebooks behind a Substack piece on the 100 percent
 government debt threshold. Analysis is built on FRED data pulled through a
-local loader (`loader.py`) and scoring layer (`macro_scores.py`), with the
-`ResearchFramework` submodule for the modeling.
+local loader (`loader.py`) and scoring layer (`macro_scores.py`), with
+[otter](https://pypi.org/project/otter/) for the modeling.
 
 ## Read first
 
@@ -17,7 +17,9 @@ local loader (`loader.py`) and scoring layer (`macro_scores.py`), with the
 - `data/fred_master.csv`: the FRED pull; `data/health_service_gap.csv`
 - `test_macro_scores.py`: tests for the scoring layer
 
-Clone with `--recursive` to pull the `ResearchFramework` submodule.
+`pip install -r requirements.txt` pulls everything, including otter. There is
+no submodule any more: otter was published to PyPI on 2026-09-11, so the
+notebooks import it like any other dependency.
 
 ## Start here
 

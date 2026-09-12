@@ -1,3 +1,4 @@
+otter
 fredapi
 pandas
 numpy

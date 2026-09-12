@@ -34,9 +34,9 @@ Usage:
 All scored columns are returned alongside the original data.
 Nothing is dropped; nothing is mutated in place.
 
-Compatible with ResearchHandler — the returned DataFrame can be passed
-directly to ResearchHandler() as the source, and individual scored
-columns can be registered as independents, controls, or used with
+Compatible with otter's Pond: the returned DataFrame can be passed
+directly to Pond() as the source, and individual scored columns can be
+registered as independents, controls, or used with
 Simulation.from_spec().
 """
 
@@ -542,7 +542,7 @@ def list_scored_columns() -> dict[str, list[str]]:
     """
     Return a catalog of all scored column names grouped by category.
     Useful for documentation and for programmatically selecting
-    subsets of scores to register as independents in ResearchHandler.
+    subsets of scores to register as independents on an otter Pond.
     """
     return {
         "derived": [
